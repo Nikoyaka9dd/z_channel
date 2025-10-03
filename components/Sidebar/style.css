@@ -1,0 +1,10 @@
+div.sidebar {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    /* 可視化のためなので、スタイル適用時に消すこと */
+    background-color: #eee;
+}
