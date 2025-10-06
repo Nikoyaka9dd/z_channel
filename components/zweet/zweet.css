@@ -1,0 +1,11 @@
+/* ズイートに関する */
+.zweet-main{
+    border: 1px solid;
+    border-radius: 1rem;
+}
+/* userに関する */
+.user{
+    border-radius: 25%;
+    font-size: 1rem;
+    border:1px solid;
+}
