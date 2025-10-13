@@ -10,7 +10,7 @@ type Props = {
 async function fetchUser(username: string): Promise<UserGetData | null> {
     try {
         // 仮想の外部 API からユーザー情報を取得する想定
-        const res = await fetch(`https://example.com/api/user/${encodeURIComponent(username)}`, {
+        const res = await fetch(`${process.env.BACKEND_ROOT_URL}/user/${encodeURIComponent(username)}`, {
             method: 'GET',
             headers: { 'Accept': 'application/json' },
             // サーバーサイド fetch の場合はキャッシュ挙動をコントロールできます
