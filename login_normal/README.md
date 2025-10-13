@@ -42,16 +42,19 @@ curl -X POST 'http://127.0.0.1:5000/api/post/make' \
 -H 'Content-Type: application/json' \
 -d '{"text":"テスト投稿","user":{"name":"testuser"},"good":0,"heart":0,"createAt":"2025-10-13T00:00:00Z"}'
 ```
+## ログインして cookie を保存
 ```bash
-# ログインして cookie を保存
 curl -c cookiejar -d "username=alice&password=PASSWORD" -X POST http://127.0.0.1:5000/login
-
-# フォローする (alice が bob をフォローする)
+```
+## フォローする (alice が bob をフォローする)
+```bash
 curl -b cookiejar -H "Content-Type: application/json" -d '{"username":"bob"}' -X POST http://127.0.0.1:5000/api/follow
-
-# フォロー解除
+```
+## フォロー解除
+```bash
 curl -b cookiejar -H "Content-Type: application/json" -d '{"username":"bob"}' -X POST http://127.0.0.1:5000/api/unfollow
-
-# 対象ユーザーの情報を確認 (followers_count, following_count, is_following が含まれる)
+```
+## 対象ユーザーの情報を確認 (followers_count, following_count, is_following が含まれる)
+```bash
 curl http://127.0.0.1:5000/api/user?name=bob
 ```
