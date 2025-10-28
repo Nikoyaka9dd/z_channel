@@ -1,0 +1,17 @@
+body {
+    position: relative;
+    display: grid;
+    grid-template-columns: 15vw 1fr;
+    gap: 1rem;
+    
+    width: 100%;
+    min-height: 100dvh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    /* 可視化のためなので、スタイル適用時に消すこと */
+    background-color: #eee;
+}
